@@ -28,24 +28,8 @@ public class HelloController {
     }
 
     @RequestMapping(value = "lang", method = {RequestMethod.GET, RequestMethod.POST})
-    @ResponseBody
     public String helloForm() {
-        String html =
-                "<html>" +
-                        "<body>" +
-                        "<form method = 'get' action = '/hello'>" +
-                        "<input type = 'text' name = 'coder' />" +
-                        "<div class=\"dropdown-content\">\n" +
-                        "<select name=\"language\" id=\"language\">\n" +
-                        "  <option value=\"english\">english</option>\n" +
-                        "  <option value=\"french\">french</option>\n" +
-                        "</select>" +
-                        "    </div>" +
-                        "<input type = 'submit' value = 'Greet Me!' />" +
-                        "</form>" +
-                        "</body>" +
-                        "</html>";
-        return html;
+        return "form";
     }
 }
 
